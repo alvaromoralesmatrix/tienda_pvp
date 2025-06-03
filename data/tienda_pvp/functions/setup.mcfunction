@@ -21,4 +21,4 @@ function tienda:utils/reset_triggers
 
 execute as @a run scoreboard players add @s puntos 0
 
-tellraw @a [{"text":"","color":"gold"},{"text":"════════════════════════════════════════","color":"gold"},{"text":"\n"},{"text":"🗡️ SISTEMA DE TIENDA PVP ACTIVADO 🗡️","color":"gold","bold":true},{"text":"\n"},{"text":"════════════════════════════════════════","color":"gold"},{"text":"\n"},{"text":"💀 Mata mobs para ganar puntos:","color":"yellow"},{"text":"\n"},{"text":"  • Zombie/Esqueleto/Araña: +1 punto","color":"white"},{"text":"\n"},{"text":"  • Creeper: +2 puntos","color":"green"},{"text":"\n"},{"text":"  • Enderman: +3 puntos","color":"dark_purple"},{"text":"\n"},{"text":"💰 Usa ","color":"yellow"},{"text":"/trigger tienda","color":"aqua","clickEvent":{"action":"suggest_command","value":"/trigger tienda"}},{"text":" para comprar items","color":"yellow"},{"text":"\n"},{"text":"════════════════════════════════════════","color":"gold"}]
+tellraw @a {"text":"Sistema de tienda activado!","color":"green"}
