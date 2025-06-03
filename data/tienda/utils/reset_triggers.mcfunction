@@ -1,0 +1,9 @@
+scoreboard players enable @a tienda
+scoreboard players enable @a comprar_manzanas
+scoreboard players enable @a comprar_espada
+scoreboard players enable @a comprar_tridente
+scoreboard players enable @a comprar_armadura
+scoreboard players enable @a comprar_arco
+scoreboard players enable @a comprar_pociones
+scoreboard players enable @a comprar_escudo
+scoreboard players enable @a comprar_perlas
