@@ -1,5 +1,26 @@
 # ================================================================
-# INTERFAZ PRINCIPAL DE LA TIENDA
+# MOSTRAR TIENDA PVP
+# Archivo: data/tienda_pvp/functions/mostrar_tienda.mcfunction
 # ================================================================
 
-tellraw @s [{"text":"","color":"gold"},{"text":"════════════════════════════════════════","color":"gold"},{"text":"\n"},{"text":"           🛒 TIENDA PVP PREMIUM 🛒","color":"gold","bold":true},{"text":"\n"},{"text":"════════════════════════════════════════","color":"gold"},{"text":"\n\n"},{"text":"💰 Tus puntos: ","color":"yellow"},{"score":{"name":"@s","objective":"puntos"},"color":"gold","bold":true},{"text":"\n\n"},{"text":"🔹 CONSUMIBLES","color":"aqua","bold":true},{"text":"\n"},{"text":"🍎 [COMPRAR] 2 Manzanas Doradas - 5 pts","color":"gold","clickEvent":{"action":"run_command","value":"/trigger comprar_manzanas"},"hoverEvent":{"action":"show_text","contents":"Restaura 4 corazones + efectos"}},{"text":"\n"},{"text":"🧪 [COMPRAR] Kit de Pociones - 12 pts","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger comprar_pociones"},"hoverEvent":{"action":"show_text","contents":"Curación II + Fuerza + Velocidad"}},{"text":"\n"},{"text":"🌀 [COMPRAR] 4 Perlas de Ender - 20 pts","color":"dark_green","clickEvent":{"action":"run_command","value":"/trigger comprar_perlas"},"hoverEvent":{"action":"show_text","contents":"Perfectas para escapar o atacar"}},{"text":"\n\n"},{"text":"🔹 ARMAS Y HERRAMIENTAS","color":"red","bold":true},{"text":"\n"},{"text":"⚔️ [COMPRAR] Espada de Diamante - 10 pts","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger comprar_espada"},"hoverEvent":{"action":"show_text","contents":"Espada básica pero efectiva"}},{"text":"\n"},{"text":"🔱 [COMPRAR] Tridente - 10 pts","color":"blue","clickEvent":{"action":"run_command","value":"/trigger comprar_tridente"},"hoverEvent":{"action":"show_text","contents":"Arma de combate a distancia"}},{"text":"\n"},{"text":"🏹 [COMPRAR] Arco Power V + Flechas - 15 pts","color":"green","clickEvent":{"action":"run_command","value":"/trigger comprar_arco"},"hoverEvent":{"action":"show_text","contents":"Arco mejorado + 64 flechas"}},{"text":"\n"},{"text":"🛡️ [COMPRAR] Escudo - 8 pts","color":"gray","clickEvent":{"action":"run_command","value":"/trigger comprar_escudo"},"hoverEvent":{"action":"show_text","contents":"Protección contra proyectiles"}},{"text":"\n\n"},{"text":"🔹 ARMADURA","color":"blue","bold":true},{"text":"\n"},{"text":"💎 [COMPRAR] Armadura Completa de Diamante - 50 pts","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger comprar_armadura"},"hoverEvent":{"action":"show_text","contents":"Set completo: Casco, Peto, Pantalones, Botas"}},{"text":"\n\n"},{"text":"════════════════════════════════════════","color":"gold"},{"text":"💡 Tip: Mata mobs para ganar más puntos","color":"gray","italic":true}]
+# Mostrar puntos actuales
+tellraw @s {"text":"","color":"gold"}
+tellraw @s {"text":"🏪 ===== TIENDA PvP ===== 🏪","color":"gold","bold":true}
+tellraw @s [{"text":"💰 Tus puntos: ","color":"yellow"},{"score":{"name":"@s","objective":"puntos"},"color":"green","bold":true}]
+tellraw @s {"text":"","color":"gold"}
+
+# Opciones de compra (ejemplo - personaliza según tus precios)
+tellraw @s {"text":"🍎 Manzanas (5 pts) ","color":"red","clickEvent":{"action":"run_command","value":"/trigger comprar_manzanas"},"hoverEvent":{"action":"show_text","contents":"Click para comprar"}}
+tellraw @s {"text":"⚔️ Espada Diamante (15 pts) ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger comprar_espada"},"hoverEvent":{"action":"show_text","contents":"Click para comprar"}}
+tellraw @s {"text":"🔱 Tridente (20 pts) ","color":"dark_aqua","clickEvent":{"action":"run_command","value":"/trigger comprar_tridente"},"hoverEvent":{"action":"show_text","contents":"Click para comprar"}}
+tellraw @s {"text":"🛡️ Armadura Diamante (25 pts) ","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger comprar_armadura"},"hoverEvent":{"action":"show_text","contents":"Click para comprar"}}
+tellraw @s {"text":"🏹 Arco Power (12 pts) ","color":"brown","clickEvent":{"action":"run_command","value":"/trigger comprar_arco"},"hoverEvent":{"action":"show_text","contents":"Click para comprar"}}
+tellraw @s {"text":"🧪 Pociones (8 pts) ","color":"light_purple","clickEvent":{"action":"run_command","value":"/trigger comprar_pociones"},"hoverEvent":{"action":"show_text","contents":"Click para comprar"}}
+tellraw @s {"text":"🛡️ Escudo (10 pts) ","color":"gray","clickEvent":{"action":"run_command","value":"/trigger comprar_escudo"},"hoverEvent":{"action":"show_text","contents":"Click para comprar"}}
+tellraw @s {"text":"🔮 Perlas Ender (18 pts) ","color":"dark_green","clickEvent":{"action":"run_command","value":"/trigger comprar_perlas"},"hoverEvent":{"action":"show_text","contents":"Click para comprar"}}
+
+tellraw @s {"text":"================================","color":"gold"}
+
+# IMPORTANTE: Reset y re-enable del trigger
+scoreboard players reset @s tienda
+scoreboard players enable @s tienda
